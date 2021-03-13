@@ -1,1 +1,1 @@
-# mixi-c-mx.github.io
+# MIXI/c- MX website
