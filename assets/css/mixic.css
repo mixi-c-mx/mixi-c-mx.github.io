@@ -50,7 +50,7 @@ header.masthead .masthead-content .masthead-subheading {
 
 .display-4 {
   font-family: 'Nunito';
-  /*font-weight: 400;*/
+  font-weight: 300;
   letter-spacing: -0.08em;
   color: #3af7c5;
   border-top-style: dotted;
@@ -61,6 +61,7 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
   font-family: 'Nunito';
+  font-weight: 200;
   line-height: 98%;
   color: #DCFAC5;
 }
