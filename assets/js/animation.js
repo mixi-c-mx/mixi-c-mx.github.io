@@ -150,7 +150,7 @@ setup = () => {
   //   // some code..
   //  }
 	
-	var canvas = createCanvas(windowWidth, windowHeight);
+	var canvas = createCanvas(windowWidth, windowHeight*2);
 	canvas.position(0,0)
 	canvas.style("z-index", "-1");
   canvas.style("z-over-flow", "visible");
@@ -164,7 +164,7 @@ setup = () => {
   for (let i = 0; i < agentNumber; i++) {
     agents.push(
       // new Agent(createVector(0, height2 ), random(2, 4), random(0.07, 0.1))
-      new Agent(createVector(0, height/2 ), random(4, 10), random(0.07, 0.1))
+      new Agent(createVector(0, height/4 ), random(4, 10), random(0.07, 0.1))
     )
   } 
 }
