@@ -50,7 +50,7 @@ header.masthead .masthead-content .masthead-subheading {
 
 .display-4 {
   font-family: 'Varela Round';
-  font-weight: 400;
+  /*font-weight: 400;*/
   letter-spacing: -0.07em;
   color: #3af7c5;
   border-top-style: dotted;
