@@ -117,12 +117,13 @@ class Agent {
   }
 
   render() {
-    // noStroke();
-    // fill(this.color);
-    // ellipse(this.pos.x, this.pos.y, this.r);
-    strokeWeight(1)
-    stroke(this.color)
-    point(this.pos.x, this.pos.y)
+    noStroke();
+    fill(this.color);
+    ellipse(this.pos.x, this.pos.y, this.r);
+
+    // strokeWeight(1)
+    // stroke(this.color)
+    // point(this.pos.x, this.pos.y)
   }
 
   boundries(path) {
@@ -141,8 +142,13 @@ let agents = []
 let agentNumber = 300
 let bg_col = '#10AADE'
 let fg_col = '#26C1FD' 
-
+let h 
+let w
 setup = () => {
+
+  // if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  //   // some code..
+  //  }
 	
 	var canvas = createCanvas(windowWidth, windowHeight);
 	canvas.position(0,0)
@@ -163,7 +169,7 @@ setup = () => {
   } 
 }
 
-function windowResized() { resizeCanvas(windowWidth, windowHeight) }
+// function windowResized() { resizeCanvas(windowWidth, windowHeight) }
 
 draw = () => {
   // background(20);
