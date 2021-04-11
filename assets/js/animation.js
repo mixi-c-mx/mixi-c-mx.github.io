@@ -145,7 +145,7 @@ let bg_col = '#10AADE' //'#062A35'
 let fg_col = 'rgba(38,193,253,0.1)' //'#26C1FD' 
 let h 
 let w
-let _hour = 5 // test for color logic
+let _hour = 18 // test for color logic
 
 let d = new Date()     // uncomment when done testing
 hour = d.getHours()
