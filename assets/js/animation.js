@@ -117,13 +117,13 @@ class Agent {
   }
 
   render() {
-    // noStroke();
-    // fill(this.color);
-    // ellipse(this.pos.x, this.pos.y, this.r);
+    noStroke();
+    fill(this.color);
+    ellipse(this.pos.x, this.pos.y, this.r);
 
-    strokeWeight(0.5)
-    stroke(this.color)
-    point(this.pos.x, this.pos.y)
+    // strokeWeight(0.5)
+    // stroke(this.color)
+    // point(this.pos.x, this.pos.y)
   }
 
   boundries(path) {
@@ -141,7 +141,7 @@ let path
 let agents = []
 let agentNumber = 300
 let bg_col = '#062A35'//'#10AADE'
-let fg_col = 'rgba(38,193,253,0.2)' //'#26C1FD' 
+let fg_col = 'rgba(38,193,253,0.1)' //'#26C1FD' 
 let h 
 let w
 setup = () => {
@@ -163,8 +163,8 @@ setup = () => {
 
   for (let i = 0; i < agentNumber; i++) {
     agents.push(
-      // new Agent(createVector(0, height2 ), random(2, 4), random(0.07, 0.1))
-      new Agent(createVector(0, height/4 ), random(4, 10), random(0.07, 0.1))
+      new Agent(createVector(0, height/4 ), random(2, 20), random(0.07, 0.1))
+      // new Agent(createVector(0, height/4 ), random(4, 10), random(0.07, 0.1))
     )
   } 
 }
