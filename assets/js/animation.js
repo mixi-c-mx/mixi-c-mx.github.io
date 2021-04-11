@@ -140,7 +140,7 @@ class Agent {
 let path
 let agents = []
 let agentNumber = 300
-let bg_col = '#10AADE'
+let bg_col = '#062A35'//'#10AADE'
 let fg_col = '#26C1FD' 
 let h 
 let w
