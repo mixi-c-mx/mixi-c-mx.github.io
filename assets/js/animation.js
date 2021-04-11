@@ -121,7 +121,7 @@ class Agent {
     // fill(this.color);
     // ellipse(this.pos.x, this.pos.y, this.r);
 
-    strokeWeight(1)
+    strokeWeight(0.5)
     stroke(this.color)
     point(this.pos.x, this.pos.y)
   }
