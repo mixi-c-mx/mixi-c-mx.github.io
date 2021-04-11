@@ -27,7 +27,8 @@ class Path {
 
   render() {
     stroke(60, 0, 0);
-    strokeWeight(this.radius * 1.5)
+    // strokeWeight(this.radius * 1.5)
+    strokeWeight(this.radius * 0.5)
     noFill()
     beginShape()
     this.points.forEach(point => {
@@ -144,23 +145,43 @@ let bg_col = '#10AADE' //'#062A35'
 let fg_col = 'rgba(38,193,253,0.1)' //'#26C1FD' 
 let h 
 let w
-setup = () => {
+let _hour = 0 // test for color logic
 
-  // if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  //   // some code..
-  //  }
-	
+let d = new Date()     // uncomment when done testing
+hour = d.getHours()
+
+// P5 Live player can't parse a dictionary moving to an array ...
+// let cols = {
+//   "morning": {"bg":'#BCA53F', "fg":'rgba(203,189,143, 0.25)'},
+//   "afternoon":{"bg":'#0EAADE', "fg":'rgba(70,189,237, 0.25)'},
+//   "evening":{"bg":'#062A35', "fg":'rgba(126,203,180, 0.25)'}
+// }
+
+let cols = [
+  ['#BCA53F', 'rgba(203,189,143, 0.05)'],   // morning
+  ['#0EAADE', 'rgba(70,189,237, 0.05)'],    // afternoon5
+  ['#062A35', 'rgba(126,203,180, 0.05)']    // eveneing
+]
+
+setup = () => {
 	var canvas = createCanvas(windowWidth, windowHeight*2);
 	canvas.position(0,0)
-	canvas.style("z-index", "-1");
-  canvas.style("z-over-flow", "visible");
+	canvas.style("z-index", "-1")
+  canvas.style("z-over-flow", "visible")
 
-  // background(20)
-  background(bg_col)
+  // if (_hour <=4 && _hour >=0){bg_col = cols['evening']['bg']; fg_col = cols['evening']['fg']}
+  // if (_hour <=12 && _hour >= 5){bg_col = cols['morning']['bg']; fg_col = cols['morning']['fg']}
+  // if (_hour <=19 && _hour >=13){bg_col = cols['afternoon']['bg']; fg_col = cols['afternoon']['fg']}
+  // if (_hour <=24 && _hour >=20){bg_col = cols['evening']['bg']; fg_col = cols['evening']['fg']}
   
+  if (_hour <=4 && _hour >=0){bg_col = cols[2][0]; fg_col = cols[2][1]}
+  if (_hour <=12 && _hour >= 5){bg_col = cols[0][0]; fg_col = cols[0][1]}
+  if (_hour <=19 && _hour >=13){bg_col = cols[1][0]; fg_col = cols[1][1]}
+  if (_hour <=24 && _hour >=20){bg_col = cols[2][0]; fg_col = cols[2][1]}
+
+  background(bg_col)
   path = new Path(15)
   // path.render();
-
   for (let i = 0; i < agentNumber; i++) {
     agents.push(
       new Agent(createVector(0, height/4 ), random(2, 20), random(0.07, 0.1))
@@ -169,13 +190,9 @@ setup = () => {
   } 
 }
 
-// function windowResized() { resizeCanvas(windowWidth, windowHeight) }
-
 draw = () => {
   // background(20);
-
   // path.render();
-
   agents.forEach(agent => {
     agent.follow(path)
     agent.update()
@@ -183,5 +200,5 @@ draw = () => {
     agent.boundries(path)
   })
 
-  
 }
+
