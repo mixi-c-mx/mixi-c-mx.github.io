@@ -39,6 +39,7 @@ header.masthead {
 header.masthead .masthead-content .masthead-subheading {
   font-size: 2rem;
   letter-spacing: -0.07em;
+  color: rgb(224,222,219);
 }
 
 @media (min-width:992px) {
@@ -52,7 +53,7 @@ header.masthead .masthead-content .masthead-subheading {
   font-family: 'Nunito';
   font-weight: 300;
   letter-spacing: -0.08em;
-  color: #3af7c5;
+  color: #DCFAC5;
   border-top-style: dotted;
   border-top-color: #12C4FF;
 }
