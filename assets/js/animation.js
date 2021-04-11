@@ -141,7 +141,7 @@ let path
 let agents = []
 let agentNumber = 300
 let bg_col = '#062A35'//'#10AADE'
-let fg_col = '#26C1FD' 
+let fg_col = 'rgba(38,193,253,0.2)' //'#26C1FD' 
 let h 
 let w
 setup = () => {
