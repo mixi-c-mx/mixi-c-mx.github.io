@@ -1,6 +1,5 @@
 .social-icons {
   color: #313437;
-  /*background-color: #fff;*/
   text-align: center;
   padding: 70px 0;
 }
@@ -8,7 +7,6 @@
 @media (max-width:767px) {
   .social-icons {
     padding: 50px 0;
-    /*background-color: background: rgba(23,162,184,0.54);*/
     background: rgba(23,162,184,0.54);
   }
 }
@@ -49,6 +47,13 @@ header.masthead .masthead-content .masthead-subheading {
   }
 }
 
+@media (min-width:1002px) {
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 6rem;
+    letter-spacing: -0.03em;
+  }
+}
+
 .display-4 {
   font-family: 'Nunito';
   font-weight: 300;
@@ -56,6 +61,7 @@ header.masthead .masthead-content .masthead-subheading {
   color: #DCFAC5;
   border-top-style: dotted;
   border-top-color: #12C4FF;
+  -letter-kern: -letter-pairs('Wh': .5px, 'ho': 1px, 'ha': 1px, 'at': 1.5px, 'he': 1.5px, 'en': 1.5px, 'er': 1.5px, 're': 1.5px, 'hy': 1.5px, );
 }
 
 p {
@@ -70,6 +76,14 @@ p {
 .mb-0, .my-0 {
   margin-bottom: 0!important;
   font-family: 'Nunito';
+  line-height: .75em;
+  -letter-kern: -letter-pairs('Ye': -13px, 'es': -3px, 'we': -4px, 'ca': -1px, 'an': -3px, 'do': -3px, 'ha': -3px, 'at': -2px, '! ': -6px, 'n ': -6px, 'e ': -6px, 'o ': -6px, );
+}
+
+.mb-1 {
+  margin-bottom: 0!important;
+  font-family: 'Nunito';
+  line-height: .75em;
 }
 
 body {
@@ -91,7 +105,6 @@ body {
   color: rgb(224,222,219);
   font-family: 'Varela Round', sans-serif;
   opacity: 1;
-  /*font-weight: initial;*/
 }
 
 body {
@@ -105,5 +118,8 @@ body {
   background-color: #10AADE;
   -webkit-font-smoothing: subpixel-antialiased !important;
   text-rendering: optimizeLegibility !important;
+}
+
+html {
 }
 
